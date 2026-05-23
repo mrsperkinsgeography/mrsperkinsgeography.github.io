@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syllabus & Expectations — Mrs Perkins Geography</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .notice-box{background:rgba(84,172,185,0.1);border:1px solid rgba(84,172,185,0.3);border-radius:10px;padding:1rem 1.25rem;margin-bottom:2rem;font-size:13px;color:var(--teal-dark);line-height:1.6;}
+  .notice-box strong{color:var(--navy);}
+  .stage-tabs{display:flex;gap:8px;margin-bottom:2rem;flex-wrap:wrap;}
+  .stage-tab{padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid rgba(84,172,185,0.3);background:white;color:var(--teal-dark);transition:all 0.2s;}
+  .stage-tab.active{background:var(--navy);color:white;border-color:var(--navy);}
+  .stage-panel{display:none;}
+  .stage-panel.active{display:block;}
+  .syllabus-card{background:white;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;border:1px solid rgba(84,172,185,0.2);}
+  .syllabus-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;gap:1rem;flex-wrap:wrap;}
+  .syllabus-card-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);}
+  .syllabus-card-badge{background:var(--navy);color:var(--amber);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+  .syllabus-lead{font-size:14px;color:#4a6270;line-height:1.7;margin-bottom:1.25rem;}
+  .expect-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.25rem;}
+  .expect-list li{display:flex;gap:10px;font-size:13px;color:#2a3f4a;line-height:1.6;}
+  .expect-list li::before{content:'→';color:var(--teal-mid);font-weight:600;flex-shrink:0;margin-top:1px;}
+  .assess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-bottom:1.25rem;}
+  .assess-item{background:var(--cream);border-radius:8px;padding:0.75rem 1rem;}
+  .assess-label{font-size:10px;font-weight:600;color:var(--teal-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+  .assess-title{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:2px;}
+  .assess-text{font-size:12px;color:#4a6270;line-height:1.5;}
+  .nesa-link{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:white;text-decoration:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:background 0.2s;margin-top:0.5rem;}
+  .nesa-link:hover{background:var(--teal-dark);}
+  .unit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-bottom:1rem;}
+  .unit-pill{background:rgba(84,172,185,0.1);border:1px solid rgba(84,172,185,0.25);border-radius:8px;padding:0.6rem 0.9rem;}
+  .unit-pill-num{font-size:10px;font-weight:600;color:var(--teal-mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+  .unit-pill-title{font-size:13px;font-weight:600;color:var(--navy);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Mrs Perkins Geography</a>
+    <ul class="nav-links">
+      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
+      <li><a href="elective.html">Stage 5 Elective 2027</a></li>
+      <li><a href="stage6.html">Stage 6</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="fun.html">Geography Fun</a></li>
+      <li><a href="journey.html">Your Journey</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-accent"></div>
+  <div class="nav-mobile" id="mobileNav">
+    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
+    <a href="syllabus.html">Syllabus</a><a href="sdgs.html">SDGs</a><a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="videos.html">Videos</a><a href="fun.html">Geography Fun</a><a href="journey.html">Your Journey</a><a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">NSW Geography · NESA</div>
+  <h1 class="page-title">Syllabus &amp; <em>Expectations</em></h1>
+  <p class="page-lead">What you'll study, what's expected of you, and how you'll be assessed — explained clearly, for you.</p>
+</div>
+<div class="page-accent"></div>
+
+<div class="main">
+
+  <div class="notice-box">
+    <strong>Important note on syllabus versions:</strong> The Geography 7–10 Syllabus (2024) will be implemented from 2027. Until then, the current Geography K–10 Syllabus (2015) applies. The Geography 11–12 Syllabus (2022) is currently being taught from 2024. Where links below go to NESA, they go to the current official version.
+  </div>
+
+  <div class="stage-tabs">
+    <div class="stage-tab active" onclick="showPanel('stage5')">Stage 5 Elective</div>
+    <div class="stage-tab" onclick="showPanel('prelim')">Stage 6 Preliminary</div>
+    <div class="stage-tab" onclick="showPanel('hsc')">Stage 6 HSC</div>
+  </div>
+
+  <!-- STAGE 5 -->
+  <div class="stage-panel active" id="panel-stage5">
+    <div class="syllabus-card">
+      <div class="syllabus-card-header">
+        <div class="syllabus-card-title">Stage 5 Geography Elective</div>
+        <div class="syllabus-card-badge">Years 9–10 · 2027</div>
+      </div>
+      <div class="syllabus-lead">This elective gives you the chance to go deeper into Geography than the mandatory course allows. You'll investigate real environments, real conflicts and real people — and develop the skills to think and write like a geographer. It's challenging, relevant and genuinely interesting.</div>
+
+      <div class="section-eyebrow">What you'll study</div>
+      <div class="unit-grid" style="margin-top:8px;">
+        <div class="unit-pill"><div class="unit-pill-num">Unit 1</div><div class="unit-pill-title">Extreme Environments</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Unit 2</div><div class="unit-pill-title">Geopolitics</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Unit 3</div><div class="unit-pill-title">Global Citizenship</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Unit 4</div><div class="unit-pill-title">Oceanography</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Unit 5</div><div class="unit-pill-title">Australia's Neighbours</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Unit 6</div><div class="unit-pill-title">Primary Production</div></div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top:1.25rem;">What's expected of you</div>
+      <ul class="expect-list">
+        <li>Engage seriously with each unit — read, question, and bring your own examples to class discussions</li>
+        <li>Develop geographical skills: map reading, data interpretation, fieldwork observation and spatial analysis</li>
+        <li>Write responses that describe, explain and evaluate — not just list facts</li>
+        <li>Connect each unit to the UN Sustainable Development Goals and real-world case studies</li>
+        <li>Complete all assessment tasks on time and to the best of your ability</li>
+        <li>Think independently — the best geographers bring ideas nobody else has thought of</li>
+      </ul>
+
+      <div class="section-eyebrow">How you'll be assessed</div>
+      <div class="assess-grid">
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Geographical Inquiry</div><div class="assess-text">Research and written response investigating a real geographical issue</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Skills Assessment</div><div class="assess-text">Map work, data analysis and spatial skills tasks throughout the course</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Examination</div><div class="assess-text">Written exam testing knowledge, understanding and geographical thinking</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Field Investigation</div><div class="assess-text">Observation and data collection in a real environment outside the classroom</div></div>
+      </div>
+      <a class="nesa-link" href="https://curriculum.nsw.edu.au/learning-areas/hsie/geography-7-10-2024/overview" target="_blank">Read the full NESA syllabus ↗</a>
+    </div>
+  </div>
+
+  <!-- PRELIMINARY -->
+  <div class="stage-panel" id="panel-prelim">
+    <div class="syllabus-card">
+      <div class="syllabus-card-header">
+        <div class="syllabus-card-title">Stage 6 Preliminary Geography</div>
+        <div class="syllabus-card-badge">Year 11 · 2022 Syllabus</div>
+      </div>
+      <div class="syllabus-lead">Preliminary Geography builds the conceptual and skills foundation for your HSC year. You'll study three core topics — exploring how physical systems work, how places change, and what human wellbeing looks like across the world. This year is about depth of thinking, not breadth of content.</div>
+
+      <div class="section-eyebrow">What you'll study</div>
+      <div class="unit-grid" style="margin-top:8px;">
+        <div class="unit-pill"><div class="unit-pill-num">Topic 1</div><div class="unit-pill-title">Biophysical Interactions</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Topic 2</div><div class="unit-pill-title">Changing Places</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Topic 3</div><div class="unit-pill-title">Human Wellbeing</div></div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top:1.25rem;">What's expected of you</div>
+      <ul class="expect-list">
+        <li>Develop sophisticated geographical skills — including spatial technologies, fieldwork and data analysis</li>
+        <li>Build extended response writing skills that explain processes, analyse patterns and evaluate strategies</li>
+        <li>Use specific, well-chosen case studies to support every argument you make</li>
+        <li>Engage with both physical and human geography — the Preliminary course covers both</li>
+        <li>Manage your time and study independently — Year 11 requires self-discipline as well as ability</li>
+        <li>Begin thinking about your Depth Study topic for HSC — what do you genuinely want to investigate?</li>
+      </ul>
+
+      <div class="section-eyebrow">How you'll be assessed</div>
+      <div class="assess-grid">
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Fieldwork Investigation</div><div class="assess-text">Practical data collection and analysis from a real field study site</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Research Task</div><div class="assess-text">In-depth investigation of a geographical issue using multiple sources</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Examinations</div><div class="assess-text">Half-yearly and yearly exams testing all three Preliminary topics</div></div>
+        <div class="assess-item"><div class="assess-label">Task type</div><div class="assess-title">Spatial Technologies</div><div class="assess-text">GIS and mapping tasks showing your ability to interpret spatial data</div></div>
+      </div>
+      <a class="nesa-link" href="https://curriculum.nsw.edu.au/learning-areas/hsie/geography-11-12-2022/overview" target="_blank">Read the full NESA syllabus ↗</a>
+    </div>
+  </div>
+
+  <!-- HSC -->
+  <div class="stage-panel" id="panel-hsc">
+    <div class="syllabus-card">
+      <div class="syllabus-card-header">
+        <div class="syllabus-card-title">Stage 6 HSC Geography</div>
+        <div class="syllabus-card-badge">Year 12 · 2022 Syllabus</div>
+      </div>
+      <div class="syllabus-lead">HSC Geography is where everything comes together. You'll study two core topics and complete an individual depth study — a genuine geographical investigation into something you care about. The HSC exam is 3 hours and rewards students who think clearly, write precisely and use evidence well.</div>
+
+      <div class="section-eyebrow">What you'll study</div>
+      <div class="unit-grid" style="margin-top:8px;">
+        <div class="unit-pill"><div class="unit-pill-num">Core 1</div><div class="unit-pill-title">Ecosystems at Risk</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Core 2</div><div class="unit-pill-title">Global Integration</div></div>
+        <div class="unit-pill"><div class="unit-pill-num">Depth Study</div><div class="unit-pill-title">Your own inquiry</div></div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top:1.25rem;">What's expected of you</div>
+      <ul class="expect-list">
+        <li>Master extended response writing — HSC Geography rewards sustained, structured analytical writing</li>
+        <li>Know your case studies inside out — specific details, locations, dates and outcomes</li>
+        <li>Complete your Depth Study with genuine intellectual rigour — this is your chance to show what you can do independently</li>
+        <li>Practice past HSC questions regularly — the exam format rewards familiarity and technique</li>
+        <li>Be able to evaluate — not just describe or explain, but judge the effectiveness and significance of geographical processes and strategies</li>
+        <li>Show up for every lesson — Year 12 Geography moves fast and every class builds on the last</li>
+      </ul>
+
+      <div class="section-eyebrow">How you'll be assessed</div>
+      <div class="assess-grid">
+        <div class="assess-item"><div class="assess-label">School-based</div><div class="assess-title">Depth Study</div><div class="assess-text">Individual geographical inquiry — your own question, your own research, your own conclusions</div></div>
+        <div class="assess-item"><div class="assess-label">School-based</div><div class="assess-title">Trial HSC Exam</div><div class="assess-text">Full 3-hour exam under HSC conditions — essential preparation for October</div></div>
+        <div class="assess-item"><div class="assess-label">External</div><div class="assess-title">HSC Examination</div><div class="assess-text">3-hour written exam in October — Section I (short answer) and Section II (extended responses)</div></div>
+        <div class="assess-item"><div class="assess-label">Weighting</div><div class="assess-title">50% / 50%</div><div class="assess-text">School assessment 50% + HSC exam 50% = your final HSC mark</div></div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top:1rem;">Exam structure at a glance</div>
+      <ul class="expect-list" style="margin-top:8px;">
+        <li>Section I — 25 marks: short-answer questions on core topics and stimulus material</li>
+        <li>Section II — 25 marks: two extended responses (one on each core topic)</li>
+        <li>Section III — 25 marks: Depth Study extended response</li>
+        <li>Total — 75 marks in 3 hours: time management is a genuine skill to practise</li>
+      </ul>
+      <a class="nesa-link" href="https://curriculum.nsw.edu.au/learning-areas/hsie/geography-11-12-2022/overview" target="_blank">Read the full NESA syllabus ↗</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showPanel(id){
+  document.querySelectorAll('.stage-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.stage-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+<footer><p>Mrs Perkins · SPCC · Site for educational use only</p></footer>
+</body>
+</html>

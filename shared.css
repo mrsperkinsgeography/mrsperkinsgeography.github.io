@@ -6,30 +6,24 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--text);line-height:1.6;}
-
-/* NAV */
 nav{background:var(--navy);position:sticky;top:0;z-index:200;}
 .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;padding:0 2rem;}
 .nav-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:white;text-decoration:none;white-space:nowrap;}
 .nav-links{display:flex;list-style:none;height:54px;}
 .nav-links>li{position:relative;height:54px;display:flex;align-items:center;}
-.nav-links>li>a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:600;padding:0 14px;height:54px;display:flex;align-items:center;letter-spacing:0.3px;transition:color 0.2s;white-space:nowrap;}
+.nav-links>li>a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:12px;font-weight:600;padding:0 10px;height:54px;display:flex;align-items:center;letter-spacing:0.3px;transition:color 0.2s;white-space:nowrap;}
 .nav-links>li>a:hover,.nav-links>li:hover>a{color:var(--yellow);}
 .has-dropdown>a::after{content:' ▾';font-size:10px;opacity:0.6;}
 .dropdown{display:none;position:absolute;top:54px;left:0;background:var(--teal-dark);min-width:200px;border-radius:0 0 8px 8px;overflow:visible;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
 .has-dropdown:hover>.dropdown{display:block;}
 .dropdown a{display:block;padding:10px 16px;color:rgba(255,255,255,0.85);font-size:13px;font-weight:600;text-decoration:none;transition:background 0.15s;white-space:nowrap;}
 .dropdown a:hover{background:rgba(255,255,255,0.1);color:var(--yellow);}
-
-/* NESTED DROPDOWN */
 .has-subdropdown{position:relative;}
 .has-subdropdown>a::after{content:' ▸';font-size:10px;opacity:0.6;float:right;margin-left:8px;}
-.subdropdown{display:none;position:absolute;left:100%;top:0;background:var(--navy);min-width:160px;border-radius:0 8px 8px 0;overflow:hidden;box-shadow:8px 4px 24px rgba(0,0,0,0.25);}
+.subdropdown{display:none;position:absolute;left:100%;top:0;background:var(--navy);min-width:160px;border-radius:0 8px 8px 8px;overflow:hidden;box-shadow:8px 4px 24px rgba(0,0,0,0.25);}
 .has-subdropdown:hover>.subdropdown{display:block;}
 .subdropdown a{display:block;padding:10px 16px;color:rgba(255,255,255,0.85);font-size:13px;font-weight:600;text-decoration:none;transition:background 0.15s;}
 .subdropdown a:hover{background:rgba(255,255,255,0.1);color:var(--yellow);}
-
-/* HAMBURGER */
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:white;}
 .nav-hamburger span{display:block;width:22px;height:2px;background:white;margin:5px 0;transition:all 0.3s;}
 .nav-mobile{display:none;background:var(--teal-dark);padding:0.5rem 0;}
@@ -38,10 +32,7 @@ nav{background:var(--navy);position:sticky;top:0;z-index:200;}
 .nav-mobile a:hover{background:rgba(255,255,255,0.08);color:var(--yellow);}
 .nav-mobile .mobile-sub{padding-left:3rem;font-size:13px;color:rgba(255,255,255,0.65);}
 .nav-mobile .mobile-subsub{padding-left:4rem;font-size:12px;color:rgba(255,255,255,0.5);}
-
 .nav-accent{height:3px;background:linear-gradient(90deg,var(--yellow),var(--amber),var(--orange));}
-
-/* PAGE HERO */
 .page-hero{background:var(--navy);padding:3rem 2rem;text-align:center;}
 .page-eyebrow{font-size:11px;font-weight:600;color:var(--teal-light);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
 .page-title{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:white;line-height:1.2;margin-bottom:10px;}
@@ -53,13 +44,6 @@ nav{background:var(--navy);position:sticky;top:0;z-index:200;}
 .section-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:10px;}
 .section-lead{font-size:15px;color:#4a6270;max-width:680px;margin-bottom:2rem;line-height:1.65;}
 .accent-rule{width:48px;height:3px;background:linear-gradient(90deg,var(--yellow),var(--orange));border-radius:2px;margin-bottom:1.5rem;}
-
-/* FOOTER */
 footer{background:var(--navy);padding:1.25rem 2rem;text-align:center;font-size:12px;color:rgba(255,255,255,0.35);}
 footer a{color:rgba(255,255,255,0.4);text-decoration:none;}
-
-@media(max-width:900px){
-  .nav-links{display:none;}
-  .nav-hamburger{display:block;}
-  .page-title{font-size:26px;}
-}
+@media(max-width:1000px){.nav-links{display:none;}.nav-hamburger{display:block;}.page-title{font-size:26px;}}
