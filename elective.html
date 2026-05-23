@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stage 5 Elective 2027 — Mrs Perkins Geography</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
@@ -11,13 +10,15 @@
   .coming-badge{background:var(--yellow);color:var(--navy);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;white-space:nowrap;}
   .coming-text{color:white;font-size:14px;}
   .coming-text strong{color:var(--amber);}
-  .subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem;}
-  .subject-card{background:white;border-radius:12px;overflow:hidden;border:1px solid rgba(84,172,185,0.25);box-shadow:0 2px 10px rgba(0,49,70,0.07);}
+
+  /* Equal height card grid */
+  .subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem;align-items:stretch;}
+  .subject-card{background:white;border-radius:12px;overflow:hidden;border:1px solid rgba(84,172,185,0.25);box-shadow:0 2px 10px rgba(0,49,70,0.07);display:flex;flex-direction:column;}
   .subject-header{background:var(--navy);padding:1rem 1.25rem 0.9rem;}
   .subject-accent{height:4px;background:linear-gradient(90deg,var(--yellow),var(--amber),var(--orange));}
   .subject-unit{font-size:10px;font-weight:600;color:var(--teal-light);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
   .subject-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:white;line-height:1.2;}
-  .subject-body{padding:1rem 1.25rem;}
+  .subject-body{padding:1rem 1.25rem;flex:1;display:flex;flex-direction:column;}
   .subject-hook{background:var(--cream);border-left:3px solid var(--teal-mid);padding:0.6rem 0.75rem;font-size:13px;font-style:italic;color:var(--navy);border-radius:0 6px 6px 0;margin-bottom:0.9rem;line-height:1.55;}
   .sub-label{font-size:10px;font-weight:600;color:var(--teal-dark);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;margin-top:0.8rem;}
   .sub-text{font-size:13px;color:var(--text);line-height:1.6;}
@@ -25,7 +26,8 @@
   .pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(84,172,185,0.12);color:var(--teal-dark);border:1px solid rgba(84,172,185,0.3);}
   .sdg-pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;color:white;}
   .stage6-box{background:rgba(0,49,70,0.06);border-radius:6px;padding:0.5rem 0.75rem;margin-top:4px;font-size:12px;color:var(--navy);line-height:1.6;}
-  .subject-footer{padding:0.55rem 1.25rem;background:rgba(84,172,185,0.08);border-top:1px solid rgba(84,172,185,0.2);font-size:11px;color:var(--sage);font-weight:600;text-align:center;}
+  /* Push stage6 box to bottom of card */
+  .card-bottom{margin-top:auto;padding-top:0.8rem;}
 </style>
 </head>
 <body>
@@ -33,33 +35,34 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">Mrs Perkins Geography</a>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="films.html">Stage 5 Lessons</a>
-        <div class="dropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div>
-      </li>
+      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
       <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
       <li><a href="elective.html">Stage 5 Elective 2027</a></li>
       <li><a href="stage6.html">Stage 6</a></li>
+      <li><a href="fun.html">Geography Fun</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-accent"></div>
+  <div class="nav-mobile" id="mobileNav">
+    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
+    <a href="sdgs.html">SDGs</a><a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="fun.html">Geography Fun</a><a href="contact.html">Contact</a>
+  </div>
 </nav>
-
 <div class="page-hero">
   <div class="page-eyebrow">Subject Selection</div>
   <h1 class="page-title">Stage 5 Elective 2027</h1>
   <p class="page-lead">Geography at Stage 5 is about the real world — conflict, climate, food, oceans, power and people.</p>
 </div>
 <div class="page-accent"></div>
-
 <div class="main">
   <div class="coming-banner">
     <span class="coming-badge">Coming 2027</span>
     <div class="coming-text">Stage 5 Geography Elective — <strong>subject selection now open.</strong> Six units connecting geography to the real world, each linked to the UN Sustainable Development Goals.</div>
   </div>
-
   <div class="subject-grid">
+
     <div class="subject-card">
       <div class="subject-header"><div class="subject-unit">Unit 1</div><div class="subject-title">Extreme Environments</div></div>
       <div class="subject-accent"></div>
@@ -69,12 +72,13 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">Climate change is pushing more of the world into extreme conditions. Understanding these environments is critical to managing future risk for billions of people.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Climate scientist</span><span class="pill">Emergency management</span><span class="pill">Environmental engineer</span><span class="pill">Park ranger</span><span class="pill">Adventure tourism</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#3F7E44;">SDG 13 — Climate Action</span><span class="sdg-pill" style="background:#56C02B;">SDG 15 — Life on Land</span><span class="sdg-pill" style="background:#26BDE2;">SDG 6 — Clean Water</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Environmental Change and Management</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#3F7E44;">SDG 13 — Climate Action</span><span class="sdg-pill" style="background:#56C02B;">SDG 15 — Life on Land</span><span class="sdg-pill" style="background:#26BDE2;">SDG 6 — Clean Water</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Environmental Change and Management</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
 
     <div class="subject-card">
@@ -86,12 +90,13 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">From Ukraine to the South China Sea, geopolitics is live news. Understanding it helps you make sense of the world rather than just watch it unfold.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Diplomat / foreign affairs</span><span class="pill">Intelligence analyst</span><span class="pill">Journalist</span><span class="pill">International law</span><span class="pill">NGO work</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#00689D;">SDG 16 — Peace &amp; Justice</span><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Global Integration (Year 12) · Human Wellbeing (Year 11) · Changing Places investigation</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#00689D;">SDG 16 — Peace &amp; Justice</span><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Global Integration (Year 12) · Human Wellbeing (Year 11) · Changing Places investigation</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
 
     <div class="subject-card">
@@ -103,12 +108,13 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">The choices you make every day — what you buy, eat, and post — are connected to people and ecosystems on the other side of the planet.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Development worker</span><span class="pill">Sustainability consultant</span><span class="pill">Social entrepreneur</span><span class="pill">Human rights law</span><span class="pill">Education</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span><span class="sdg-pill" style="background:#BF8B2E;">SDG 12 — Responsible Consumption</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Human Wellbeing (Year 11) · Global Integration (Year 12) · Depth Study fieldwork</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span><span class="sdg-pill" style="background:#BF8B2E;">SDG 12 — Responsible Consumption</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Human Wellbeing (Year 11) · Global Integration (Year 12) · Depth Study fieldwork</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
 
     <div class="subject-card">
@@ -120,12 +126,13 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">Australia has one of the world's longest coastlines. The ocean regulates our climate, feeds billions, and is under unprecedented pressure from human activity.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Marine biologist</span><span class="pill">Oceanographer</span><span class="pill">Coastal engineer</span><span class="pill">Environmental policy</span><span class="pill">Blue economy</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#0A97D9;">SDG 14 — Life Below Water</span><span class="sdg-pill" style="background:#3F7E44;">SDG 13 — Climate Action</span><span class="sdg-pill" style="background:#26BDE2;">SDG 6 — Clean Water</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Coastal fieldwork opportunities</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#0A97D9;">SDG 14 — Life Below Water</span><span class="sdg-pill" style="background:#3F7E44;">SDG 13 — Climate Action</span><span class="sdg-pill" style="background:#26BDE2;">SDG 6 — Clean Water</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Coastal fieldwork opportunities</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
 
     <div class="subject-card">
@@ -137,12 +144,13 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">Australia's security, economy and cultural identity are deeply tied to the region. Understanding our neighbours is not optional — it is essential.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Aid and development</span><span class="pill">Defence / foreign policy</span><span class="pill">Trade and commerce</span><span class="pill">Cultural liaison</span><span class="pill">Tourism</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#FD9D24;">SDG 11 — Sustainable Cities</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Changing Places (Year 11) · Human Wellbeing (Year 11) · Global Integration (Year 12)</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#19486A;">SDG 17 — Partnerships</span><span class="sdg-pill" style="background:#FD9D24;">SDG 11 — Sustainable Cities</span><span class="sdg-pill" style="background:#DD1367;">SDG 10 — Reduced Inequalities</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Changing Places (Year 11) · Human Wellbeing (Year 11) · Global Integration (Year 12)</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
 
     <div class="subject-card">
@@ -154,16 +162,17 @@
         <div class="sub-label">Why it matters</div><div class="sub-text">Australia is one of the world's leading food exporters. From drought to supply chains to genetically modified crops, these decisions shape what ends up on your plate.</div>
         <div class="sub-label">Careers</div>
         <div class="pill-row"><span class="pill">Agricultural scientist</span><span class="pill">Food systems analyst</span><span class="pill">Land economist</span><span class="pill">Rural planning</span><span class="pill">Agribusiness</span></div>
-        <div class="sub-label">Links to the SDGs</div>
-        <div class="pill-row"><span class="sdg-pill" style="background:#DDA63A;">SDG 2 — Zero Hunger</span><span class="sdg-pill" style="background:#BF8B2E;">SDG 12 — Responsible Consumption</span><span class="sdg-pill" style="background:#56C02B;">SDG 15 — Life on Land</span></div>
-        <div class="sub-label">Links to Stage 6 Geography</div>
-        <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Fieldwork and spatial technologies</div>
+        <div class="card-bottom">
+          <div class="sub-label">Links to the SDGs</div>
+          <div class="pill-row"><span class="sdg-pill" style="background:#DDA63A;">SDG 2 — Zero Hunger</span><span class="sdg-pill" style="background:#BF8B2E;">SDG 12 — Responsible Consumption</span><span class="sdg-pill" style="background:#56C02B;">SDG 15 — Life on Land</span></div>
+          <div class="sub-label">Links to Stage 6 Geography</div>
+          <div class="stage6-box">Biophysical Interactions (Year 11) · Ecosystems at Risk (Year 12) · Fieldwork and spatial technologies</div>
+        </div>
       </div>
-      <div class="subject-footer">St Philip's Christian College — Geography</div>
     </div>
+
   </div>
 </div>
-
-<footer><p>Mrs Perkins Geography · St Philip's Christian College Gosford</p><p style="margin-top:6px;">NSW Geography K–10 Syllabus © NESA · Site for educational use only</p></footer>
+<footer><p>Mrs Perkins · SPCC · Site for educational use only</p></footer>
 </body>
 </html>

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Mrs Perkins Geography</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
-  .contact-box{max-width:560px;background:var(--navy);border-radius:16px;padding:2.5rem;color:white;}
-  .contact-box p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:1.25rem;line-height:1.7;}
-  .contact-email{display:inline-block;color:var(--amber);text-decoration:none;font-size:17px;font-weight:600;margin-bottom:1.5rem;}
-  .contact-email:hover{color:var(--yellow);}
-  .contact-note{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;border-top:1px solid rgba(255,255,255,0.1);padding-top:1.25rem;margin-top:0.5rem;}
-  .contact-note strong{color:rgba(255,255,255,0.7);}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:700px;}
+  .contact-card{background:var(--navy);border-radius:14px;padding:2rem;}
+  .contact-card-label{font-size:10px;font-weight:600;color:var(--teal-light);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;}
+  .contact-card-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:white;margin-bottom:12px;}
+  .contact-card-text{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:1.25rem;}
+  .contact-btn{display:inline-block;background:var(--teal-mid);color:white;text-decoration:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:background 0.2s;}
+  .contact-btn:hover{background:var(--teal-dark);}
+  .contact-btn-outline{display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.85);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:background 0.2s,border-color 0.2s;}
+  .contact-btn-outline:hover{background:rgba(255,255,255,0.08);border-color:var(--teal-light);}
 </style>
 </head>
 <body>
@@ -20,38 +22,43 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">Mrs Perkins Geography</a>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="films.html">Stage 5 Lessons</a>
-        <div class="dropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div>
-      </li>
+      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
       <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
       <li><a href="elective.html">Stage 5 Elective 2027</a></li>
       <li><a href="stage6.html">Stage 6</a></li>
+      <li><a href="fun.html">Geography Fun</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-accent"></div>
+  <div class="nav-mobile" id="mobileNav">
+    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
+    <a href="sdgs.html">SDGs</a><a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="fun.html">Geography Fun</a><a href="contact.html">Contact</a>
+  </div>
 </nav>
-
 <div class="page-hero">
   <div class="page-eyebrow">Get in touch</div>
   <h1 class="page-title">Questions?</h1>
-  <p class="page-lead">For questions about the unit, subject selection, or anything else.</p>
+  <p class="page-lead">Ask in class — that's always fastest. Otherwise use the options below.</p>
 </div>
 <div class="page-accent"></div>
-
 <div class="main">
-  <div class="contact-box">
-    <p>If you have a question about the unit, your film choice, subject selection, or anything else — get in touch.</p>
-    <a class="contact-email" href="mailto:michelle.perkins@spcc.nsw.edu.au">michelle.perkins@spcc.nsw.edu.au</a>
-    <div class="contact-note">
-      You can also ask your question in class — that's usually faster.<br><br>
-      This site is for Geography students at St Philip's Christian College Gosford.<br><br>
-      <strong>Mrs Perkins · Geography Department · St Philip's Christian College Gosford</strong>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-card-label">For students</div>
+      <div class="contact-card-title">Message Mrs Perkins</div>
+      <div class="contact-card-text">Have a question about the unit, your film choice, or subject selection? Send me a message directly.</div>
+      <a class="contact-btn" href="mailto:michelle.perkins@spcc.nsw.edu.au">Send a message ↗</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-label">For parents &amp; visitors</div>
+      <div class="contact-card-title">Contact via the college</div>
+      <div class="contact-card-text">Please contact me via the college — the front office will pass your message on to the Geography Department.</div>
+      <a class="contact-btn-outline" href="https://www.spcc.nsw.edu.au/schools/colleges/gosford/about/contact-us" target="_blank">SPCC Gosford contact page ↗</a>
     </div>
   </div>
 </div>
-
-<footer><p>Mrs Perkins Geography · St Philip's Christian College Gosford</p><p style="margin-top:6px;">NSW Geography K–10 Syllabus © NESA · Site for educational use only</p></footer>
+<footer><p>Mrs Perkins · SPCC · Site for educational use only</p></footer>
 </body>
 </html>

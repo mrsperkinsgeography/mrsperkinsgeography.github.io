@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Films — Mrs Perkins Geography</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
@@ -29,42 +28,31 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">Mrs Perkins Geography</a>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="films.html">Stage 5 Lessons</a>
-        <div class="dropdown">
-          <a href="films.html">Films</a>
-          <a href="lessons.html">Lessons</a>
-          <a href="resources.html">Resources</a>
-        </div>
-      </li>
-      <li class="has-dropdown">
-        <a href="sdgs.html">SDGs</a>
-        <div class="dropdown"><a href="sdgs.html">SDG Summary</a></div>
-      </li>
+      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
+      <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
       <li><a href="elective.html">Stage 5 Elective 2027</a></li>
       <li><a href="stage6.html">Stage 6</a></li>
+      <li><a href="fun.html">Geography Fun</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-accent"></div>
+  <div class="nav-mobile" id="mobileNav">
+    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
+    <a href="sdgs.html">SDGs</a><a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="fun.html">Geography Fun</a><a href="contact.html">Contact</a>
+  </div>
 </nav>
-
 <div class="page-hero">
-  <div class="page-eyebrow">Stage 5 Lessons — Step 1</div>
+  <div class="page-eyebrow">The Three Films Lesson — Step 1</div>
   <h1 class="page-title">Choose your film</h1>
   <p class="page-lead">Read each description. Pick the one that speaks to you. All three are available on ClickView.</p>
 </div>
 <div class="page-accent"></div>
-
 <div class="main">
   <div class="film-grid">
-
     <div class="film-card">
-      <div class="film-card-top">
-        <div class="film-number">Film 1</div>
-        <div class="film-title">2040</div>
-        <div class="film-meta">Dir. Damon Gameau · Australia, 2019 · G · 92 min</div>
-      </div>
+      <div class="film-card-top"><div class="film-number">Film 1</div><div class="film-title">2040</div><div class="film-meta">Dir. Damon Gameau · Australia, 2019 · G · 92 min</div></div>
       <div class="film-accent"></div>
       <div class="film-body">
         <div class="film-desc">Australian filmmaker Damon Gameau had a newborn daughter and was terrified about the world she would inherit. Rather than make a film about how bad things are, he travelled the world to find the solutions that already exist.</div>
@@ -74,13 +62,8 @@
         <a class="film-btn" href="https://clickv.ie/w/bTSC" target="_blank">Watch on ClickView ↗</a>
       </div>
     </div>
-
     <div class="film-card">
-      <div class="film-card-top">
-        <div class="film-number">Film 2</div>
-        <div class="film-title">Before the Flood</div>
-        <div class="film-meta">Leonardo DiCaprio · Nat Geo, 2016 · PG · 96 min</div>
-      </div>
+      <div class="film-card-top"><div class="film-number">Film 2</div><div class="film-title">Before the Flood</div><div class="film-meta">Leonardo DiCaprio · Nat Geo, 2016 · PG · 96 min</div></div>
       <div class="film-accent"></div>
       <div class="film-body">
         <div class="film-desc">As a UN Messenger of Peace, DiCaprio travels to the world's most climate-affected places — and asks one uncomfortable question: why, despite knowing about climate change for decades, do we keep failing to act?</div>
@@ -90,13 +73,8 @@
         <a class="film-btn" href="https://www.clickview.com.au" target="_blank">Watch on ClickView ↗</a>
       </div>
     </div>
-
     <div class="film-card">
-      <div class="film-card-top">
-        <div class="film-number">Film 3</div>
-        <div class="film-title">Drowning in Plastic</div>
-        <div class="film-meta">Liz Bonnin · BBC One, 2018 · All ages · 60 min</div>
-      </div>
+      <div class="film-card-top"><div class="film-number">Film 3</div><div class="film-title">Drowning in Plastic</div><div class="film-meta">Liz Bonnin · BBC One, 2018 · All ages · 60 min</div></div>
       <div class="film-accent"></div>
       <div class="film-body">
         <div class="film-desc">Wildlife biologist Liz Bonnin investigates ocean plastic — starting on Lord Howe Island, a UNESCO World Heritage Site just 400km off the NSW coast, where seabirds are dying from plastic they've eaten.</div>
@@ -106,13 +84,8 @@
         <a class="film-btn" href="https://www.clickview.com.au" target="_blank">Watch on ClickView ↗</a>
       </div>
     </div>
-
   </div>
 </div>
-
-<footer>
-  <p>Mrs Perkins Geography · St Philip's Christian College Gosford</p>
-  <p style="margin-top:6px;">NSW Geography K–10 Syllabus © NESA · Site for educational use only</p>
-</footer>
+<footer><p>Mrs Perkins · SPCC · Site for educational use only</p></footer>
 </body>
 </html>
