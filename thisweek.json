@@ -29,6 +29,7 @@
     "source": "The Conversation",
     "date": "Week of 26 May 2026",
     "connection": "Rice feeds more than half the world - and a new study has found that greenhouse gas emissions from rice paddies have nearly doubled since the 1960s, now equivalent to the annual emissions of 239 million cars. The culprits include farming expansion, flooded fields and fertiliser use. This is a powerful Primary Production story - the tension between feeding a growing population and the environmental cost of doing it.",
-    "sdg": "SDG 2 - Zero Hunger"
+    "sdg": "SDG 2 - Zero Hunger",
+    "chart_url": "https://ourworldindata.org/grapher/global-hunger-index?tab=map"
   }
 ]
