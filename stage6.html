@@ -2,15 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stage 6 - Mrs Perkins Geography</title>
+<title>Stage 6 Geography - Mrs Perkins Geography</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
- .tbd-box{max-width:560px;margin:4rem auto;text-align:center;padding:3rem 2rem;background:white;border-radius:16px;border:1px solid rgba(84,172,185,0.2);}
- .tbd-icon{font-size:48px;margin-bottom:1rem;}
- .tbd-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:10px;}
- .tbd-text{font-size:15px;color:#4a6270;line-height:1.65;margin-bottom:1.5rem;}
- .tbd-badge{display:inline-block;background:rgba(84,172,185,0.12);color:var(--teal-dark);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:1.5rem;}
+ .year-tabs{display:flex;gap:0;border-bottom:2px solid rgba(84,172,185,0.2);margin-bottom:2rem;}
+ .year-tab{padding:0.75rem 1.5rem;font-size:13px;font-weight:600;color:#4a6270;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.2s;background:none;border-top:none;border-left:none;border-right:none;}
+ .year-tab.active{color:var(--navy);border-bottom-color:var(--teal-mid);}
+ .year-tab:hover{color:var(--navy);}
+ .year-panel{display:none;}
+ .year-panel.active{display:block;}
+
+ .hook-box{background:white;border-left:4px solid var(--teal-mid);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin-bottom:2rem;}
+ .hook-text{font-family:"Playfair Display",serif;font-size:18px;font-style:italic;color:var(--navy);line-height:1.5;}
+
+ .intro-text{font-size:15px;color:#2a3f4a;line-height:1.8;margin-bottom:2rem;max-width:780px;}
+
+ .topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:2rem;}
+ .topic-card{background:white;border-radius:12px;border:1px solid rgba(84,172,185,0.2);overflow:hidden;}
+ .topic-card-header{background:var(--navy);padding:0.9rem 1.25rem;}
+ .topic-card-eyebrow{font-size:10px;font-weight:600;color:var(--teal-light);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;}
+ .topic-card-title{font-family:"Playfair Display",serif;font-size:16px;font-weight:700;color:white;font-style:italic;}
+ .topic-card-body{padding:1rem 1.25rem;}
+ .topic-card-hours{font-size:11px;font-weight:600;color:var(--teal-mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+ .topic-card-desc{font-size:13px;color:#4a6270;line-height:1.6;}
+ .topic-card-choice{font-size:12px;color:#7a4f00;background:rgba(236,162,35,0.1);border:1px solid rgba(236,162,35,0.25);border-radius:6px;padding:6px 10px;margin-top:8px;line-height:1.5;}
+
+ .gi-box{background:white;border-radius:12px;border:2px solid rgba(84,172,185,0.3);padding:1.5rem;margin-bottom:2rem;}
+ .gi-label{font-size:10px;font-weight:600;color:var(--teal-mid);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px;}
+ .gi-title{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+ .gi-text{font-size:14px;color:#2a3f4a;line-height:1.75;margin-bottom:10px;}
+ .gi-text:last-child{margin-bottom:0;}
+
+ .assess-intro{font-size:14px;color:#2a3f4a;line-height:1.75;margin-bottom:1.25rem;max-width:720px;}
+ .assess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-bottom:2rem;}
+ .assess-card{background:white;border-radius:10px;padding:1rem 1.25rem;border:1px solid rgba(84,172,185,0.2);}
+ .assess-label{font-size:10px;font-weight:600;color:var(--teal-mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+ .assess-pct{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+ .assess-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+ .assess-desc{font-size:12px;color:#4a6270;line-height:1.5;}
+
+ .exam-box{background:var(--navy);border-radius:12px;padding:1.5rem;margin-bottom:2rem;color:white;}
+ .exam-box-title{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--amber);margin-bottom:1rem;}
+ .exam-section-list{display:flex;flex-direction:column;gap:0.6rem;}
+ .exam-section{background:rgba(255,255,255,0.07);border-radius:8px;padding:0.85rem 1.1rem;display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:start;}
+ .exam-section-mark{font-size:13px;font-weight:700;color:var(--amber);}
+ .exam-section-name{font-size:13px;font-weight:600;color:white;margin-bottom:2px;}
+ .exam-section-desc{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.5;}
+ .exam-note{font-size:12px;color:rgba(255,255,255,0.5);margin-top:1rem;line-height:1.6;}
+
+ .fieldwork-box{background:rgba(84,172,185,0.08);border:1px solid rgba(84,172,185,0.25);border-radius:10px;padding:1rem 1.25rem;margin-bottom:2rem;font-size:13px;color:#2a4a56;line-height:1.65;}
+ .fieldwork-box strong{color:var(--navy);}
+
+ .nesa-link{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:white;text-decoration:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:background 0.2s;}
+ .nesa-link:hover{background:var(--teal-dark);}
+
+ @media(max-width:600px){
+  .exam-section{grid-template-columns:1fr;}
+  .year-tab{padding:0.6rem 1rem;font-size:12px;}
+ }
 </style>
 </head>
 <body>
@@ -18,40 +68,296 @@
  <div class="nav-inner">
  <a class="nav-brand" href="index.html">Mrs Perkins Geography</a>
  <ul class="nav-links">
-      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
-      <li><a href="elective.html">Stage 5 Elective 2027</a></li>
-      <li><a href="stage6.html">Stage 6</a></li>
-      <li><a href="syllabus.html">Syllabus</a></li>
-      <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="fun.html">Geography Fun</a></li>
-      <li class="has-dropdown">
-        <a href="sources.html">Sources</a>
-        <div class="dropdown">
-          <a href="thisweek.html">This Week in Geography</a>
-          <a href="sources.html">Geography Sources</a>
-        </div>
-      </li>
-      <li><a href="journey.html">Your Journey</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="films.html">Films</a><a href="lessons.html">Lessons</a><a href="resources.html">Resources</a></div></div></div></li>
+  <li><a href="elective.html">Stage 5 Elective 2027</a></li>
+  <li><a href="stage6.html">Stage 6</a></li>
+  <li><a href="syllabus.html">Syllabus</a></li>
+  <li class="has-dropdown"><a href="sdgs.html">SDGs</a><div class="dropdown"><a href="sdgs.html">SDG Summary</a></div></li>
+  <li><a href="videos.html">Videos</a></li>
+  <li><a href="fun.html">Geography Fun</a></li>
+  <li class="has-dropdown">
+   <a href="sources.html">Sources</a>
+   <div class="dropdown">
+    <a href="thisweek.html">This Week in Geography</a>
+    <a href="sources.html">Geography Sources</a>
+   </div>
+  </li>
+  <li><a href="journey.html">Your Journey</a></li>
+  <li><a href="contact.html">Contact</a></li>
+ </ul>
  <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"></button>
  </div>
  <div class="nav-accent"></div>
  <div class="nav-mobile" id="mobileNav">
-    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
-    <a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="syllabus.html">Syllabus</a><a href="sdgs.html">SDGs</a><a href="videos.html">Videos</a><a href="fun.html">Geography Fun</a><a href="sources.html">Sources</a><a class="mobile-sub" href="thisweek.html">This Week in Geography</a><a class="mobile-sub" href="sources.html">Geography Sources</a><a href="journey.html">Your Journey</a><a href="contact.html">Contact</a>
-  </div>
-</nav>
-<div class="main">
- <div class="tbd-box">
- 
- <div class="tbd-badge">To be developed</div>
- <div class="tbd-title">Stage 6 Geography</div>
- <div class="tbd-text">Resources for Years 11 and 12 Geography are coming. Check back soon for content covering the NSW Stage 6 Geography syllabus.</div>
+  <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="films.html">Films</a><a class="mobile-subsub" href="lessons.html">Lessons</a><a class="mobile-subsub" href="resources.html">Resources</a>
+  <a href="elective.html">Stage 5 Elective 2027</a><a href="stage6.html">Stage 6</a><a href="syllabus.html">Syllabus</a><a href="sdgs.html">SDGs</a><a href="videos.html">Videos</a><a href="fun.html">Geography Fun</a><a href="sources.html">Sources</a><a class="mobile-sub" href="thisweek.html">This Week in Geography</a><a class="mobile-sub" href="sources.html">Geography Sources</a><a href="journey.html">Your Journey</a><a href="contact.html">Contact</a>
  </div>
+</nav>
+
+<div class="page-hero">
+ <div class="page-eyebrow">NSW Geography · 2022 Syllabus</div>
+ <h1 class="page-title">Stage 6 <em>Geography</em></h1>
+ <p class="page-lead">Years 11 and 12 - what you'll study, how you'll be assessed, and what the HSC looks like.</p>
 </div>
+<div class="page-accent"></div>
+
+<div class="main">
+
+ <div class="year-tabs">
+  <button class="year-tab active" onclick="showYear('y11', this)">Year 11 - Preliminary</button>
+  <button class="year-tab" onclick="showYear('y12', this)">Year 12 - HSC</button>
+ </div>
+
+ <!-- YEAR 11 -->
+ <div class="year-panel active" id="panel-y11">
+
+  <div class="hook-box">
+   <div class="hook-text">"Year 11 builds the foundation. Year 12 is where you use it."</div>
+  </div>
+
+  <p class="intro-text">Year 11 is 120 hours across four focus areas. You study all four, and you complete at least 12 hours of fieldwork across the year.</p>
+
+  <div class="section-eyebrow" style="margin-bottom:12px;">What you'll study</div>
+
+  <div class="topic-grid">
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 1</div>
+     <div class="topic-card-title">Earth's Natural Systems</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">40 hours</div>
+     <div class="topic-card-desc">How the Earth works as an integrated physical system - landscapes, cycles and the natural processes that shape land and water.</div>
+    </div>
+   </div>
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 2</div>
+     <div class="topic-card-title">People, Patterns and Processes</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">40 hours</div>
+     <div class="topic-card-desc">How humans have transformed the Earth's surface, and what makes one place different from another.</div>
+     <div class="topic-card-choice">Your class will focus on one chosen study within this topic.</div>
+    </div>
+   </div>
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 3</div>
+     <div class="topic-card-title">Human-Environment Interactions</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">20 hours</div>
+     <div class="topic-card-desc">How natural systems and human activity interact - land cover change, climate change and the long-term consequences of how we have used the Earth.</div>
+     <div class="topic-card-choice">Your class will focus on one chosen study: a geographic region, a contemporary hazard or climate change.</div>
+    </div>
+   </div>
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 4</div>
+     <div class="topic-card-title">Geographical Investigation</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">20 hours</div>
+     <div class="topic-card-desc">Your own geographical inquiry - you choose the question, collect data in the field, and present your findings.</div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="gi-box">
+   <div class="gi-label">What is the Geographical Investigation?</div>
+   <div class="gi-title">Your own research - in Year 11</div>
+   <div class="gi-text">The Geographical Investigation is a school-based research task in Year 11. It does not appear in the HSC exam. You may have heard it called a "Depth Study" - that was the old syllabus name.</div>
+   <div class="gi-text">You choose a geographical question, plan your investigation, collect real data and communicate your findings. It takes around 20 hours and is assessed by your school as part of your Year 11 grade.</div>
+  </div>
+
+  <div class="fieldwork-box">
+   <strong>Fieldwork:</strong> 12 hours are mandatory in Year 11, spread across the course.
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px;">How you'll be assessed in Year 11</div>
+
+  <p class="assess-intro">Year 11 is entirely school-based - there is no external exam at the end of Year 11. Your school sets at least three formal tasks across the year. Your teacher uses all of that evidence to determine an overall grade.</p>
+
+  <div class="assess-grid">
+   <div class="assess-card">
+    <div class="assess-label">Component</div>
+    <div class="assess-pct">40%</div>
+    <div class="assess-name">Knowledge and understanding</div>
+    <div class="assess-desc">Your understanding of geographical content across all four focus areas</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">Component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Geographical skills and tools</div>
+    <div class="assess-desc">Maps, graphs, data, fieldwork instruments and spatial technologies</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">Component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Inquiry and research</div>
+    <div class="assess-desc">Including the Geographical Investigation and fieldwork</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">Component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Communication</div>
+    <div class="assess-desc">How clearly and accurately you communicate geographical ideas in appropriate forms</div>
+   </div>
+  </div>
+
+  <a class="nesa-link" href="https://curriculum.nsw.edu.au/learning-areas/hsie/geography-11-12-2022/overview" target="_blank">Read the full NESA syllabus ↗</a>
+
+ </div>
+
+ <!-- YEAR 12 -->
+ <div class="year-panel" id="panel-y12">
+
+  <div class="hook-box">
+   <div class="hook-text">"Year 12 is where Year 11 pays off. The HSC rewards students who think clearly and write precisely."</div>
+  </div>
+
+  <p class="intro-text">Year 12 is 120 hours across three focus areas - you study all three. Year 11 content is assumed knowledge. The HSC exam is three hours and covers all of Year 12.</p>
+
+  <div class="section-eyebrow" style="margin-bottom:12px;">What you'll study</div>
+
+  <div class="topic-grid">
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 1</div>
+     <div class="topic-card-title">Global Sustainability</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">30 hours</div>
+     <div class="topic-card-desc">What sustainability means in practice, and whether a real global economic activity is actually achieving it.</div>
+     <div class="topic-card-choice">Your class will study one global economic activity and evaluate its sustainability.</div>
+    </div>
+   </div>
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 2</div>
+     <div class="topic-card-title">Rural and Urban Places</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">45 hours</div>
+     <div class="topic-card-desc">How settlements work and change - from small rural towns to megacities - and the forces reshaping places globally.</div>
+     <div class="topic-card-choice">Your class will study one rural place, one urban place and one large city outside Australia.</div>
+    </div>
+   </div>
+
+   <div class="topic-card">
+    <div class="topic-card-header">
+     <div class="topic-card-eyebrow">Focus area 3</div>
+     <div class="topic-card-title">Ecosystems and Global Biodiversity</div>
+    </div>
+    <div class="topic-card-body">
+     <div class="topic-card-hours">45 hours</div>
+     <div class="topic-card-desc">How ecosystems function, what they are worth and what is happening to global biodiversity.</div>
+     <div class="topic-card-choice">Your class will study two ecosystem types, with at least one from outside Australia.</div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="fieldwork-box">
+   <strong>Fieldwork:</strong> 12 hours are mandatory in Year 12. One school-based task must be based on a fieldwork activity.
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px;">How you'll be assessed in Year 12</div>
+
+  <p class="assess-intro">Year 12 has two parts: school-based assessment tasks set by your school throughout the year, and the external HSC exam in October. Your school submits a mark to NESA based on your tasks; this is combined with your exam mark to produce your final HSC mark. The weighting of that combination is set by NESA across all HSC courses - check the NESA website for the current details.</p>
+
+  <div class="assess-grid">
+   <div class="assess-card">
+    <div class="assess-label">School component</div>
+    <div class="assess-pct">40%</div>
+    <div class="assess-name">Knowledge and understanding</div>
+    <div class="assess-desc">Across all three Year 12 focus areas</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">School component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Skills and tools</div>
+    <div class="assess-desc">Maps, graphs, GIS, fieldwork instruments and data</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">School component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Inquiry and research</div>
+    <div class="assess-desc">Including the mandatory fieldwork-based task</div>
+   </div>
+   <div class="assess-card">
+    <div class="assess-label">School component</div>
+    <div class="assess-pct">20%</div>
+    <div class="assess-name">Communication</div>
+    <div class="assess-desc">Communicating geographical understanding in appropriate forms</div>
+   </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px;">The HSC exam</div>
+
+  <div class="exam-box">
+   <div class="exam-box-title">Geography HSC Examination - 100 marks, 3 hours</div>
+   <div class="exam-section-list">
+
+    <div class="exam-section">
+     <div class="exam-section-mark">Section I - 15 marks</div>
+     <div>
+      <div class="exam-section-name">Multiple choice</div>
+      <div class="exam-section-desc">15 multiple choice questions using stimulus material. About 30 minutes.</div>
+     </div>
+    </div>
+
+    <div class="exam-section">
+     <div class="exam-section-mark">Section II - 45 marks</div>
+     <div>
+      <div class="exam-section-name">Short answer</div>
+      <div class="exam-section-desc">4 to 6 short-answer questions, some with multiple parts. About 1 hour 20 minutes.</div>
+     </div>
+    </div>
+
+    <div class="exam-section">
+     <div class="exam-section-mark">Section III - 20 marks</div>
+     <div>
+      <div class="exam-section-name">Structured extended response</div>
+      <div class="exam-section-desc">A structured extended response on either Rural and Urban Places or Ecosystems and Global Biodiversity. About 35 minutes.</div>
+     </div>
+    </div>
+
+    <div class="exam-section">
+     <div class="exam-section-mark">Section IV - 20 marks</div>
+     <div>
+      <div class="exam-section-name">Extended response</div>
+      <div class="exam-section-desc">An extended response on whichever of the two topics was not examined in Section III. About 35 minutes.</div>
+     </div>
+    </div>
+
+   </div>
+   <div class="exam-note">Global Sustainability is examined in Sections I and II. Sections III and IV cover Rural and Urban Places and Ecosystems and Global Biodiversity - one each, but you will not know which is which until you open the paper.</div>
+  </div>
+
+  <a class="nesa-link" href="https://curriculum.nsw.edu.au/learning-areas/hsie/geography-11-12-2022/overview" target="_blank">Read the full NESA syllabus ↗</a>
+
+ </div>
+
+</div>
+
 <footer><p>Mrs Perkins · SPCC · Site for educational use only</p></footer>
 <script data-goatcounter="https://mrsperkinsgeography.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+function showYear(id, btn) {
+ document.querySelectorAll('.year-panel').forEach(p => p.classList.remove('active'));
+ document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+ document.getElementById('panel-' + id).classList.add('active');
+ btn.classList.add('active');
+}
+</script>
 </body>
 </html>
