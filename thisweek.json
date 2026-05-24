@@ -20,7 +20,15 @@
     "url": "https://www.australiangeographic.com.au/australian-geographic-adventure/2026/05/the-sounds-of-adventure-exploring-nzs-queen-charlotte-track/",
     "source": "Australian Geographic",
     "date": "Week of 26 May 2026",
-    "connection": "The Marlborough Sounds in New Zealand's South Island - a place so isolated that boats are the only way in, yet now drawing 35,000 visitors a year to hike, bike and kayak. A real-world example of how tourism transforms remote places, and what sustainable access to natural environments can look like. Connects to Australia's Neighbours and Rural and Urban Places.",
+    "connection": "The Marlborough Sounds in New Zealand's South Island - so isolated that boats are the only way in, yet now drawing 35,000 visitors a year. A real-world example of how tourism transforms remote places, and what sustainable access to natural environments can look like. Connects to Australia's Neighbours and Rural and Urban Places.",
     "sdg": "SDG 15 - Life on Land"
+  },
+  {
+    "title": "Rice feeds billions of people - but its role in fuelling climate change is growing",
+    "url": "https://theconversation.com/rice-feeds-billions-of-people-but-its-role-in-fueling-climate-change-is-growing-279449",
+    "source": "The Conversation",
+    "date": "Week of 26 May 2026",
+    "connection": "Rice feeds more than half the world - and a new study has found that greenhouse gas emissions from rice paddies have nearly doubled since the 1960s, now equivalent to the annual emissions of 239 million cars. The culprits include farming expansion, flooded fields and fertiliser use. This is a powerful Primary Production story - the tension between feeding a growing population and the environmental cost of doing it.",
+    "sdg": "SDG 2 - Zero Hunger"
   }
 ]
